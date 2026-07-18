@@ -1,0 +1,157 @@
+# ===========================
+# Python .gitignore
+# ===========================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.local
+.env.production
+.env.staging
+
+# ===========================
+# Google Cloud
+# ===========================
+*.json
+!package.json
+!package-lock.json
+!dbt_project/profiles.yml
+service-account-key.json
+gcp-credentials.json
+
+# ===========================
+# IDE / Editor
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===========================
+# Data Files (Large)
+# ===========================
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.gz
+data/processed/*.csv
+data/processed/*.parquet
+data/external/*.csv
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# ===========================
+# Model Files
+# ===========================
+*.joblib
+*.model
+*.bin
+forecasting/prophet/models/
+forecasting/arima/models/
+forecasting/lightgbm/models/
+
+# ===========================
+# Reports & Outputs
+# ===========================
+reports/*.html
+reports/*.pdf
+
+# ===========================
+# Docker
+# ===========================
+docker-compose.override.yml
+
+# ===========================
+# dbt
+# ===========================
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# ===========================
+# Streamlit
+# ===========================
+.streamlit/secrets.toml
+
+# ===========================
+# Logs
+# ===========================
+*.log
+logs/
+
+# ===========================
+# Misc
+# ===========================
+*.bak
+*.tmp
+*.temp
