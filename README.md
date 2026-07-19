@@ -53,7 +53,16 @@ Forecast Outputs → BigQuery
 Streamlit Dashboard
         ↓
 Inventory Optimization Recommendations
-```
+
+## 📊 Data Warehouse Schema Design
+
+### Data Dictionary & Warehouse Architecture
+The platform ingests the Walmart M5 Forecasting Dataset and organizes it into a modern, three-tier data warehouse architecture:
+- **Raw Layer**: Direct ingestion of source CSVs into `raw_calendar`, `raw_sales`, and `raw_prices`.
+- **Staging Layer (dbt)**: Data cleaning, formatting, and unpivoting of sales data into long format.
+- **Analytics Layer (Star Schema)**: Optimized tables (`fact_sales`, `dim_product`, `dim_store`, `dim_date`) partitioned by date and clustered by store/item for query performance.
+
+For full column definitions and relationship diagrams, see [`docs/data_dictionary.md`](docs/data_dictionary.md).
 
 ## 🛠️ Tech Stack
 
