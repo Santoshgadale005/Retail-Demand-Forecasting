@@ -319,8 +319,9 @@ def main():
         sys.exit(0 if success else 1)
 
     elif args.etl:
-        logger.info("🔄 ETL Pipeline — Coming in Week 1-2")
-        logger.info("   This will be implemented in upcoming days.")
+        from etl.load_data import run_etl_pipeline
+        success = run_etl_pipeline()
+        sys.exit(0 if success else 1)
 
     elif args.forecast:
         logger.info("📈 Forecasting Models — Coming in Week 3")
