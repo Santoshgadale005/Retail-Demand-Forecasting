@@ -1,0 +1,79 @@
+2026-07-19 12:15:51.633 | INFO     | __main__:main:314 - 🛒 Retail Demand Forecasting & Inventory Optimization
+2026-07-19 12:15:51.633 | INFO     | __main__:main:315 -    Project Root: C:\Users\SNEHA\Retail-Demand-Forecasting
+2026-07-19 12:15:51.633 | INFO     | __main__:main:334 - Use --help to see available commands
+2026-07-19 12:15:51.633 | INFO     | __main__:main:335 - Use --verify to check environment setup
+2026-07-19 12:16:34.993 | INFO     | __main__:main:314 - 🛒 Retail Demand Forecasting & Inventory Optimization
+2026-07-19 12:16:34.993 | INFO     | __main__:main:315 -    Project Root: C:\Users\SNEHA\Retail-Demand-Forecasting
+2026-07-19 12:16:34.993 | INFO     | __main__:run_verification:239 - 🔍 Starting Environment Verification...
+2026-07-19 12:16:34.993 | INFO     | __main__:run_verification:240 - ============================================================
+2026-07-19 12:16:34.993 | INFO     | __main__:verify_python_environment:60 - ============================================================
+2026-07-19 12:16:34.993 | INFO     | __main__:verify_python_environment:61 - 🐍 Python Environment Verification
+2026-07-19 12:16:34.993 | INFO     | __main__:verify_python_environment:62 - ============================================================
+2026-07-19 12:16:34.993 | INFO     | __main__:verify_python_environment:66 - Python Version: 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 23:03:10) [MSC v.1916 64 bit (AMD64)]
+2026-07-19 12:16:34.993 | WARNING  | __main__:verify_python_environment:69 - ⚠️  Python 3.10+ is recommended for this project
+2026-07-19 12:16:38.400 | INFO     | __main__:verify_python_environment:98 -   ✅ pandas                         — Data manipulation and analysis
+2026-07-19 12:16:38.400 | INFO     | __main__:verify_python_environment:98 -   ✅ numpy                          — Numerical computing
+2026-07-19 12:16:38.766 | INFO     | __main__:verify_python_environment:98 -   ✅ matplotlib                     — Static visualizations
+2026-07-19 12:16:38.790 | INFO     | __main__:verify_python_environment:98 -   ✅ plotly                         — Interactive visualizations
+2026-07-19 12:16:49.019 | INFO     | __main__:verify_python_environment:98 -   ✅ sklearn                        — Machine learning utilities
+2026-07-19 12:16:49.927 | INFO     | __main__:verify_python_environment:98 -   ✅ lightgbm                       — Gradient boosting forecasting
+2026-07-19 12:16:50.794 | INFO     | __main__:verify_python_environment:98 -   ✅ prophet                        — Time-series forecasting
+2026-07-19 12:16:51.487 | INFO     | __main__:verify_python_environment:98 -   ✅ google.cloud.bigquery          — Google BigQuery client
+2026-07-19 12:16:51.869 | INFO     | __main__:verify_python_environment:98 -   ✅ streamlit                      — Dashboard framework
+2026-07-19 12:16:52.305 | INFO     | __main__:verify_python_environment:98 -   ✅ sqlalchemy                     — SQL toolkit
+2026-07-19 12:16:52.305 | INFO     | __main__:verify_python_environment:98 -   ✅ dotenv                         — Environment variable management
+2026-07-19 12:16:52.305 | INFO     | __main__:verify_python_environment:98 -   ✅ loguru                         — Logging framework
+2026-07-19 12:16:52.305 | INFO     | __main__:verify_python_environment:98 -   ✅ tqdm                           — Progress bars
+2026-07-19 12:16:52.372 | INFO     | __main__:verify_python_environment:98 -   ✅ yaml                           — YAML configuration parsing
+2026-07-19 12:16:52.372 | INFO     | __main__:verify_python_environment:103 - ------------------------------------------------------------
+2026-07-19 12:16:52.372 | INFO     | __main__:verify_python_environment:104 - Installed: 14/14
+2026-07-19 12:16:52.380 | SUCCESS  | __main__:verify_python_environment:110 - ✅ All critical packages are installed!
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:117 - ============================================================
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:118 - 🔧 Environment Variables Verification
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:119 - ============================================================
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:136 - Required Variables:
+2026-07-19 12:16:52.381 | WARNING  | __main__:verify_environment_variables:142 -   ❌ GCP_PROJECT_ID                 — Google Cloud Project ID [NOT SET]
+2026-07-19 12:16:52.381 | WARNING  | __main__:verify_environment_variables:142 -   ❌ BQ_DATASET                     — BigQuery Dataset Name [NOT SET]
+2026-07-19 12:16:52.381 | WARNING  | __main__:verify_environment_variables:142 -   ❌ BQ_LOCATION                    — BigQuery Dataset Location [NOT SET]
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:145 - 
+Optional Variables:
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:151 -   ⏭️  GCP_CREDENTIALS_PATH           — GCP Service Account Key Path [OPTIONAL]
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:151 -   ⏭️  KAGGLE_USERNAME                — Kaggle API Username [OPTIONAL]
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:151 -   ⏭️  KAGGLE_KEY                     — Kaggle API Key [OPTIONAL]
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_environment_variables:151 -   ⏭️  FORECAST_HORIZON               — Forecast Horizon (days) [OPTIONAL]
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:158 - ============================================================
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:159 - 📁 Folder Structure Verification
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:160 - ============================================================
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ data/raw/
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ data/processed/
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ data/external/
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ notebooks/
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ warehouse/
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ dbt_project/
+2026-07-19 12:16:52.381 | INFO     | __main__:verify_folder_structure:187 -   ✅ forecasting/prophet/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ forecasting/arima/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ forecasting/lightgbm/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ inventory/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ streamlit/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ reports/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ dashboards/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ deployment/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ docker/
+2026-07-19 12:16:52.386 | INFO     | __main__:verify_folder_structure:187 -   ✅ docs/
+2026-07-19 12:16:52.388 | INFO     | __main__:verify_folder_structure:187 -   ✅ tests/
+2026-07-19 12:16:52.388 | INFO     | __main__:verify_folder_structure:187 -   ✅ configs/
+2026-07-19 12:16:52.388 | INFO     | __main__:verify_bigquery_connection:197 - ============================================================
+2026-07-19 12:16:52.388 | INFO     | __main__:verify_bigquery_connection:198 - ☁️  BigQuery Connection Verification
+2026-07-19 12:16:52.388 | INFO     | __main__:verify_bigquery_connection:199 - ============================================================
+2026-07-19 12:16:55.479 | ERROR    | __main__:verify_bigquery_connection:232 - ❌ BigQuery connection failed: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+2026-07-19 12:16:55.479 | INFO     | __main__:verify_bigquery_connection:233 - 💡 Ensure you've run: gcloud auth application-default login
+2026-07-19 12:16:55.479 | INFO     | __main__:run_verification:250 - 
+============================================================
+2026-07-19 12:16:55.481 | INFO     | __main__:run_verification:251 - 📊 Verification Summary
+2026-07-19 12:16:55.481 | INFO     | __main__:run_verification:252 - ============================================================
+2026-07-19 12:16:55.481 | INFO     | __main__:run_verification:256 -   Python Environment             ✅ PASSED
+2026-07-19 12:16:55.481 | INFO     | __main__:run_verification:256 -   Environment Variables          ⚠️  NEEDS ATTENTION
+2026-07-19 12:16:55.481 | INFO     | __main__:run_verification:256 -   Folder Structure               ✅ PASSED
+2026-07-19 12:16:55.481 | INFO     | __main__:run_verification:256 -   BigQuery Connection            ⚠️  NEEDS ATTENTION
+2026-07-19 12:16:55.481 | WARNING  | __main__:run_verification:262 - 
+⚠️  Some checks need attention. Review the output above and fix issues.

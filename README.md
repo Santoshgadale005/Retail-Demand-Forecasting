@@ -214,3 +214,15 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ---
 
 ⭐ If you found this project useful, please give it a star!
+
+## Day 2 Progress
+
+### Completed Tasks
+
+- Downloaded and organized the M5 dataset
+- Performed exploratory data analysis (EDA)
+- Verified dataset structure
+- Checked missing values and duplicates
+- Created a data dictionary
+- Designed the initial data warehouse schema
+- Prepared the project for data preprocessing
