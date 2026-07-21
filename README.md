@@ -226,3 +226,12 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 - Created a data dictionary
 - Designed the initial data warehouse schema
 - Prepared the project for data preprocessing
+
+## Day 3 Progress
+
+### Completed
+
+- Built ETL pipeline
+- Cleaned raw datasets
+- Saved processed datasets
+- Performed data quality validation
