@@ -1,0 +1,23 @@
+# configs/config.yaml
+
+project:
+  name: "Retail Demand Forecasting & Inventory Optimization"
+  version: "1.0"
+
+paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  log_dir: "logs/"
+
+files:
+  calendar: "calendar.csv"
+  sales: "sales_train_validation.csv"
+  prices: "sell_prices.csv"
+
+bigquery:
+  dataset_id: "retail_forecasting"
+  staging_tables:
+    calendar: "stg_calendar"
+    sales: "stg_sales"
+    prices: "stg_prices"
+  location: "US"
