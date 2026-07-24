@@ -1,0 +1,21 @@
+retail_forecasting:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID', 'default-project-id') }}"
+      dataset: retail_forecasting
+      threads: 4
+      keyfile: "{{ env_var('GCP_CREDENTIALS_PATH', '/dev/null') }}"
+      timeout_seconds: 300
+      location: US
+    prod:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('GCP_PROJECT_ID', 'default-project-id') }}"
+      dataset: retail_forecasting_prod
+      threads: 8
+      keyfile: "{{ env_var('GCP_CREDENTIALS_PATH', '/dev/null') }}"
+      timeout_seconds: 300
+      location: US
