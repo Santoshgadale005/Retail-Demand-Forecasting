@@ -148,3 +148,8 @@ dbt_project/logs/
 *.bak
 *.tmp
 *.temp
+# ===========================
+# Log Files
+# ===========================
+logs/*.log
+*.log
