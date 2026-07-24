@@ -172,6 +172,15 @@ gcloud config set project your-gcp-project-id
 python main.py --verify
 ```
 
+### 7. Run ETL Pipeline
+
+```bash
+# This will extract data, clean it, and load it into BigQuery and local checkpoints
+python etl/pipeline.py
+```
+
+
+
 ## 📅 Development Timeline
 
 | Week | Focus Area |
