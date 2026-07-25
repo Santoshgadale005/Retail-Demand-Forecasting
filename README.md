@@ -178,8 +178,22 @@ python main.py --verify
 # This will extract data, clean it, and load it into BigQuery and local checkpoints
 python etl/pipeline.py
 ```
+### 8. Run dbt Transformations
 
+```bash
+# Navigate to the dbt project folder
+cd dbt_project
 
+# Verify BigQuery connection (requires GCP_PROJECT_ID and GCP_CREDENTIALS_PATH in .env)
+dbt debug --profiles-dir .
+
+# Run staging and intermediate models
+dbt run --profiles-dir .
+
+# Generate and view documentation
+dbt docs generate --profiles-dir .
+dbt docs serve --profiles-dir .
+```
 
 ## 📅 Development Timeline
 

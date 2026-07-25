@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: retail_forecasting
+    description: "Raw datasets ingested from M5 forecasting Kaggle competition"
+    tables:
+      - name: stg_calendar
+        description: "Raw calendar containing events and snapshot eligibility"
+      - name: stg_sales
+        description: "Raw wide-format sales data containing units sold per day"
+      - name: stg_prices
+        description: "Raw weekly pricing per item per store"
