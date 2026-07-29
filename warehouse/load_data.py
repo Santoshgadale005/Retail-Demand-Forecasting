@@ -204,7 +204,7 @@ def load_fact_sales():
     ]
 
     # Development sample
-    fact_sales = fact_sales.head(100000)
+    fact_sales = fact_sales.head(1000000)
 
     # Clear existing data
     conn.execute("DELETE FROM fact_sales")
