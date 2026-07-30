@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Core fact table capturing daily sales quantities and pricing"
+    columns:
+      - name: date_key
+        description: "Surrogate key for the date dimension"
+        tests:
+          - not_null
+      - name: store_key
+        description: "Surrogate key for the store dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_store')
+              field: store_key
+      - name: product_key
+        description: "Surrogate key for the product dimension"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_product')
+              field: product_key
+      - name: sales_qty
+        description: "Units sold"
+        tests:
+          - not_null
+      - name: sell_price
+        description: "Selling price"
+
+  - name: dim_date
+    description: "Calendar dimension with time-based features"
+    columns:
+      - name: date_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    description: "Product dimension containing categories and departments"
+    columns:
+      - name: product_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: category
+        description: "Product category"
+        tests:
+          - accepted_values:
+              values: ['HOBBIES', 'HOUSEHOLD', 'FOODS']
+
+  - name: dim_store
+    description: "Store dimension containing store and state IDs"
+    columns:
+      - name: store_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
