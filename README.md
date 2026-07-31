@@ -258,3 +258,68 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 - Cleaned raw datasets
 - Saved processed datasets
 - Performed data quality validation
+# 🛒 Retail Demand Forecasting
+
+## 📌 Overview
+
+Retail Demand Forecasting is an end-to-end Data Engineering and Machine Learning project that predicts future product demand using historical sales data. The project includes ETL pipelines, a data warehouse, forecasting models, REST APIs, interactive dashboards, Docker deployment, and dbt transformations.
+
+---
+
+## 🚀 Features
+
+- ETL Pipeline
+- Data Warehouse (SQLite)
+- Demand Forecasting
+- Inventory Management
+- FastAPI REST API
+- Streamlit Dashboard
+- Docker Deployment
+- dbt Models & Tests
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas
+- Scikit-learn
+- SQLite
+- FastAPI
+- Streamlit
+- Docker
+- dbt
+- GitHub Actions
+
+---
+
+## 📂 Project Structure
+## 📸 Project Screenshots
+
+### Streamlit Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+### Sales Overview
+
+![Sales](docs/screenshots/sales.png)
+
+### Inventory Dashboard
+
+![Inventory](docs/screenshots/inventory.png)
+
+### Demand Forecast
+
+![Forecast](docs/screenshots/forecast.png)
+
+### Model Performance
+
+![Model Performance](docs/screenshots/model_performance.png)
+
+### FastAPI Swagger
+
+![Swagger](docs/screenshots/swagger.png)
+
+## 🏗️ Architecture
+
+![Architecture](docs/architecture.png)

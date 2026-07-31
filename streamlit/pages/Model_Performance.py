@@ -35,7 +35,7 @@ if os.path.exists(metrics_file):
 
     with col2:
         st.metric("RMSE", metrics.get("RMSE", "N/A"))
-        st.metric("R² Score", metrics.get("R²", "N/A"))
+        st.metric("R² Score", metrics.get("R2", "N/A"))
 
 else:
     st.warning("model_metrics.txt not found.")
