@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: retail-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: retail-api
+  template:
+    metadata:
+      labels:
+        app: retail-api
+    spec:
+      containers:
+      - name: retail-api
+        image: bharath0004/retail-demand-forecasting-api:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: retail-dashboard
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: retail-dashboard
+  template:
+    metadata:
+      labels:
+        app: retail-dashboard
+    spec:
+      containers:
+      - name: retail-dashboard
+        image: bharath0004/retail-demand-forecasting-dashboard:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8501
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

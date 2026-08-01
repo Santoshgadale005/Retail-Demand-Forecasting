@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: retail-config
+data:
+  DB_PATH: "data/warehouse.db"
+  MODEL_PATH: "models/demand_forecast.pkl"
+  LOG_LEVEL: "INFO"
+  FORECAST_DAYS: "7"
