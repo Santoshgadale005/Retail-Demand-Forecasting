@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from prometheus_fastapi_instrumentator import Instrumentator
 import sqlite3
 import pandas as pd
+import logging
 import joblib
 import os
 
@@ -10,9 +12,17 @@ app = FastAPI(
     description="REST API for Retail Demand Forecasting Project",
     version="1.0.0"
 )
+Instrumentator().instrument(app).expose(app)
 
 DATABASE = "data/warehouse.db"
-MODEL_PATH = "models/demand_forecast_model.pkl"
+MODEL_PATH = "models/demand_forecasting.pkl"
+logging.basicConfig(
+    filename="logs/api.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    force=True
+)
+logging.info("===== API STARTED SUCCESSFULLY =====")
 
 
 def get_connection():
@@ -24,7 +34,21 @@ def home():
     return {
         "message": "Retail Demand Forecasting API is running successfully!"
     }
+@app.get("/health")
+def health():
+    db_status = "Connected"
 
+    try:
+        conn = sqlite3.connect(DATABASE)
+        conn.close()
+    except Exception:
+        db_status = "Disconnected"
+
+    return {
+        "status": "Healthy",
+        "database": db_status,
+        "model": "Available" if os.path.exists(MODEL_PATH) else "Not Found"
+    }
 
 @app.get("/sales")
 def sales_summary():
@@ -84,11 +108,13 @@ class PredictionInput(BaseModel):
     rolling_mean_28: float
     day_number: int
 
-
 @app.post("/predict")
 def predict(data: PredictionInput):
 
+    logging.info("Prediction request received")
+
     if not os.path.exists(MODEL_PATH):
+        logging.error("Model file not found.")
         return {"error": "Model file not found."}
 
     model = joblib.load(MODEL_PATH)
@@ -103,6 +129,8 @@ def predict(data: PredictionInput):
     }])
 
     prediction = model.predict(features)[0]
+
+    logging.info(f"Prediction generated: {round(float(prediction), 2)}")
 
     return {
         "predicted_sales": round(float(prediction), 2)
